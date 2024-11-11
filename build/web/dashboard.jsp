@@ -9,7 +9,7 @@
     session = request.getSession();
     String user_name = (String) session.getAttribute("user_name");
     String user_email = (String) session.getAttribute("user_email");
-    if(user_name==null || user_email==null){
+    if (user_name == null || user_email == null) {
         response.sendRedirect("./accessDenied.html");
     }
 //                    
@@ -22,7 +22,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo</title>
+        <link rel="icon" href="./assect/titleLogo.png" type="image/png">
+        <title>Dashboard</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
               integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -278,8 +279,8 @@
                         </div>
                         <div class="d-flex flex-column align-items-center"><img src="./assect/male.png" alt=""
                                                                                 class="dashboardUserImage">
-                            <p id="userName"><%= user_name %></p>
-                            <p id="userEmail"><%= user_email %></p>
+                            <p id="userName"><%= user_name%></p>
+                            <p id="userEmail"><%= user_email%></p>
                         </div>
                         <div class="dashboardNavigationContainer">
                             <div class="dashboardNavigationDiv"><svg xmlns="http://www.w3.org/2000/svg"
@@ -305,13 +306,13 @@
                                                                      viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                 <path fill="white"
                                       d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
-                                </svg><span class="dashboardNavigationText" onclick="window.location.href='./logout.jsp'">Logout</span></div>
+                                </svg><span class="dashboardNavigationText" onclick="window.location.href = './logout.jsp'">Logout</span></div>
                             <div class="dashboardNavigationDiv"><svg xmlns="http://www.w3.org/2000/svg"
                                                                      class="navigation-icon"
                                                                      viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                 <path fill="white"
                                       d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416L0 96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3l0 41.7 0 41.7L52.5 440.6zM256 352l0-96 0-128 0-32c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29l0-64z" />
-                                </svg><span class="dashboardNavigationText" onclick="window.location.href='./index.html'">Go to home page</span></div>
+                                </svg><span class="dashboardNavigationText" onclick="window.location.href = './index.html'">Go to home page</span></div>
                             <div class="dashboardNavigationDiv" id="closeSideNav"
                                  style=" background-color: #00E861;padding: 5px 10px; border-radius: 10px;text-align: center;">
                                 <svg xmlns="http://www.w3.org/2000/svg" style="height: 25px; width:25px;"
