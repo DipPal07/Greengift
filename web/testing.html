@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formMainDiv {
+            /* height: 500px; */
+            width: 350px;
+            background-color: #387f39;
+            border-radius: 40px;
+            color: white;
+            animation-name: login;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes login {
+            from {
+                background-color: rgb(4, 19, 7);
+            }
+
+            to {
+                background-color: #387f39;
+            }
+        }
+
+        .loginImage {
+            background-image: url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            height: 200px;
+            width: 350px;
+            background-size: cover;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+
+        #brandName {
+            text-align: center;
+            font-size: 30px;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: 800;
+            padding-top: 10%;
+        }
+
+        .login-registration-form {
+            /* display: flex;
+  justify-content: center; */
+            margin-top: 20px;
+        }
+
+        .loginContent {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 30px;
+        }
+
+        .login-registration-label {
+            margin-top: 20px;
+        }
+
+        .login-registration-input {
+            height: 37px;
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 0px 8px;
+        }
+
+        .login-registration-btn {
+            background-color: black;
+            color: white;
+            margin-top: 20px;
+            width: 150px;
+            height: 50px;
+            font-size: 16px;
+            align-self: center;
+            margin-bottom: 7px;
+            border-radius: 15px;
+            border: 1px solid black;
+
+        }
+
+        .formMainDiv:hover {
+            transition-duration: 0.6s;
+
+            transform: scale(1.05);
+            box-shadow: 10px 15px 20px rgb(115, 214, 189);
+        }
+
+        #addressInputBox {
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 0px 8px;
+        }
+
+        .aLink {
+            margin-left: 7px;
+            color: rgb(0, 225, 255);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #login {
+            /* display: initial; */
+            /* display: none; */
+        }
+
+        #registration {
+            /* display: none; */
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+
+        #forgotPassword {
+            /* display: none; */
+        }
+
+        #loginAndRegistration {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9;
+        }
+
+        .x {
+            display: flex;
+            justify-content: right;
+            padding-top: 15px;
+            padding-right: 15px;
+        }
+
+        .ximage {
+            height: 20px;
+            width: 20px;
+        }
+
+        .overly {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .overlyadd {
+            z-index: 5;
+            opacity: 1;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="showLogin">Login</button>
+    <button id="showRegistration">registration</button>
+    <!-- Login registration and forgot password -->
+    <div>
+        <div id="loginAndRegistration">
+            <form class="login-registration-form" id="login" name="login" method="post" action="loginJsp.jsp">
+                <div class="formMainDiv">
+                    <div class="loginImage">
+                        <div class="x">
+                            <img src="../assect/x1.png" class="ximage" id="xlog" />
+                        </div>
+                        <p id="brandName">GreenGifts</p>
+                    </div>
+                    <div class="loginContent">
+                        <label class="login-registration-label" for="email">Email</label>
+                        <input class="login-registration-input" name="email" type="text"
+                            placeholder="Enter your email" />
+                        <label class="login-registration-label" for="password">Password</label>
+                        <input class="login-registration-input" name="password" type="password"
+                            placeholder="Enter your password" />
+                        <input class="login-registration-btn" type="submit" value="Login" />
+
+                        <p>
+                            don,t remember password?<a class="aLink" id="showForgotPassword">Forget password</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+            <form class="login-registration-form" id="registration" name="registration" method="post"
+                action="Registration">
+                <div class="formMainDiv">
+                    <div class="loginImage">
+                        <div class="x">
+                            <img src="../assect/x1.png" class="ximage" id="xreg" />
+                        </div>
+                        <p id="brandName">GreenGifts</p>
+                    </div>
+                    <div class="loginContent">
+                        <label class="login-registration-label" for="name">Name</label>
+                        <input class="login-registration-input" name="name" type="text" placeholder="Enter your name" />
+                        <label class="login-registration-label" for="mobileNo">Mobile Number</label>
+                        <input class="login-registration-input" name="mobileNo" type="text"
+                            placeholder="Enter your mobile number" />
+                        <label class="login-registration-label" for="email">Email</label>
+                        <input class="login-registration-input" name="email" type="text"
+                            placeholder="Enter your email" />
+
+                        <label class="login-registration-label" for="password">Password</label>
+                        <input class="login-registration-input" name="password" type="password"
+                            placeholder="Enter your password" />
+                        <label class="login-registration-label" for="address">Address</label>
+                        <textarea class="addressInputBox" id="address" type="text" placeholder="Enter your address"
+                            name="address"></textarea>
+                        <input class="login-registration-btn" type="submit" value="Register" />
+                        <p>already have account?<a class="aLink openLogin" href="#">Login</a></p>
+                    </div>
+                </div>
+            </form>
+            <form class="login-registration-form" id="forgotPassword" name="forgotPassword" method="post"
+                action="ForgotPassword">
+                <div class="formMainDiv">
+                    <div class="loginImage">
+                        <div class="x">
+                            <img src="../assect/x1.png" class="ximage" id="xfor" />
+                        </div>
+                        <p id="brandName">GreenGifts</p>
+                    </div>
+                    <div class="loginContent">
+                        <label class="login-registration-label" for="email">Email</label>
+                        <input class="login-registration-input" name="email" type="text"
+                            placeholder="Enter your email" />
+
+                        <label class="login-registration-label" for="newPassword">New password</label>
+                        <input class="login-registration-input" id="newPassword" name="newPassword" type="password"
+                            placeholder="Enter your new password" />
+                        <label class="login-registration-label" for="confirmNewPassword"> Confirm new password</label>
+
+                        <input class="login-registration-input" id="confirmNewPassword" name="confirmNewPassword"
+                            type="password" placeholder="Enter your new password" />
+                        <label class="login-registration-label" for="otp">OTP</label>
+                        <input class="login-registration-input" id="otp" name="otp" type="text"
+                            placeholder="Enter your otp" />
+
+                        <input class="login-registration-btn" type="submit" value="Change" />
+
+                        <p>remember password?<a class="aLink openLogin" href="#">login</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="overly"></div>
+    </div>
+    <script>
+        let login = document.querySelector("#login");
+        let registration = document.querySelector("#registration");
+        let showLogin = document.querySelector("#showLogin");
+        let showRegistration = document.querySelector("#showRegistration");
+        let overly = document.querySelector(".overly");
+        let forgotPassword = document.querySelector("#forgotPassword");
+        let showForgotPassword = document.querySelector("#showForgotPassword");
+        let xlog = document.querySelector("#xlog");
+        let xreg = document.querySelector("#xreg");
+        let xfor = document.querySelector("#xfor");
+        showLogin.onclick = () => {
+            login.style.display = "block";
+            overly.classList.add("overlyadd");
+        };
+        showRegistration.onclick = () => {
+            registration.style.display = "block";
+            overly.classList.add("overlyadd");
+        };
+        console.log(document.querySelectorAll("a"))
+        console.log(document.querySelectorAll(".openLogin"));
+
+        document.querySelectorAll(".openLogin").forEach((node) => {
+            node.addEventListener("click", (e) => {
+                e.preventDefault()
+                console.log("hiiiii");
+
+                forgotPassword.style.display = "none";
+                registration.style.display = "none";
+                login.style.display = "block";
+            })
+        })
+        showForgotPassword.onclick = () => {
+            login.style.display = "none";
+            forgotPassword.style.display = "block";
+            overly.classList.add("overlyadd");
+            console.log(showForgotPassword);
+
+        };
+        showForgotPassword.onclick = () => {
+            login.style.display = "none";
+
+            forgotPassword.style.display = "block";
+            overly.classList.add("overlyadd");
+        };
+        xlog.onclick = () => {
+            login.style.display = "none";
+            overly.classList.remove("overlyadd");
+        };
+        xreg.onclick = () => {
+            registration.style.display = "none";
+            overly.classList.remove("overlyadd");
+        };
+        xfor.onclick = () => {
+            forgotPassword.style.display = "none";
+            overly.classList.remove("overlyadd");
+        };
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+@import "./variable.css";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-main-div {
+  background-color: var(--footer-background-color);
+  /* position: fixed; */
+  /* width: 100%; */
+  /* bottom: 0; */
+}
+.footer-main-container {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.container-color {
+  background-color: var(--footer-background-color);
+}
+
+.footer-hr {
+  border: 1px solid red;
+  margin: 0;
+}
+
+.footerLogo {
+  width: 200px;
+}
+
+.footerIcon {
+  height: 15px;
+  margin-right: 5px;
+}
+
+.footerText {
+  font-size: 14px;
+  color: var(--footer-font-color);
+}
+
+.copyright {
+  font-size: 14px;
+  color: gray;
+}
+
+.footerNavigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+.footerButtomMargin {
+  margin-bottom: 10px;
+}
+
+hr.footer-hr {
+  border: none;
+  height: 2px;
+  background-color: red;
+}
+.footer-bottom-navigation {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+.custom-shape-divider-top-1729090058 {
+  /* position: absolute; */
+  /* top: 0; */
+  background-color: #98ffdb;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1729090058 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 138px;
+}
+
+.custom-shape-divider-top-1729090058 .shape-fill {
+  fill: #ffffff;
+}

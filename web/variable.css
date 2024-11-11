@@ -1,0 +1,21 @@
+:root {
+  --navbar-background-color: #f1fff5;
+  --navbar-item-font-color: black;
+  --navbar-item-hover-background-color: #009a9d;
+  --side-navbar-background-color: #a2f8f9;
+  --button-background-color: #041a0f;
+  --button-font-color: #ffffff;
+  --heading-background-color: #63dba6;
+  --heading-font-color: #004748;
+  --footer-background-color: #98ffdb;
+  --footer-font-color: #006769;
+  --award-card-color: #d4fcff;
+  --vital-impotent-banner-background-color: #bdfde0;
+  --vital-impotent-card-background-color: #9bffd3;
+  --technology-card-background--color: #b7f2e6;
+  --normal-font-color-dark: black;
+  --normal-font-color-light: white;
+  --main-banner-first-font-color: white;
+  --main-banner-second-font-color: #00ff88;
+  --donate-sidebar-background-color: #002222;
+}
