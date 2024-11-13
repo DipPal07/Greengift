@@ -38,9 +38,9 @@
             session.setAttribute("user_adddress", rs.getString("user_address"));
             session.setAttribute("user_mobile_number", rs.getString("user_mobile_number"));
 
-            response.sendRedirect("dashboard.jsp");
+           response.sendRedirect("./success.html");
         } else {
-            out.print("failed");
+            response.sendRedirect("./accessDenied.html");
         }
 
     } catch (Exception e) {

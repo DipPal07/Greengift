@@ -49,10 +49,9 @@ public class Registration extends HttpServlet {
             ps.setString(5, address);
             int x = ps.executeUpdate();
             if (x > 0) {
-                out.print("Successful");
-                response.sendRedirect("./dashboard.html");
+               response.sendRedirect("./success.html");
             } else {
-                out.print("failed");
+                response.sendRedirect("./accessDenied.html");
             }
 
         } catch (Exception e) {
