@@ -35,10 +35,10 @@
             session.setAttribute("user_id", rs.getString("user_id"));
             session.setAttribute("user_name", rs.getString("user_name"));
             session.setAttribute("user_email", rs.getString("user_email"));
-            session.setAttribute("user_adddress", rs.getString("user_address"));
+            session.setAttribute("user_address", rs.getString("user_address"));
             session.setAttribute("user_mobile_number", rs.getString("user_mobile_number"));
 
-           response.sendRedirect("./success.html");
+           response.sendRedirect("./success1.html");
         } else {
             response.sendRedirect("./accessDenied.html");
         }

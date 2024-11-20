@@ -8,7 +8,7 @@ const navBarHTML = ` <nav>
                             d='m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z' />
                     </svg></a></li>
             <li><a href='./index.html' class='navItem'>Home</a></li>
-            <li><a href='.approach.html' class='navItem'>Approach</a></li>
+            <li><a href='./approach.html' class='navItem'>Approach</a></li>
             <li><a href='./donate.html' class='navItem'>Donate</a></li>
             <li><a href='./about.html' class='navItem'>About</a></li>
             <li><a href='./contact.html' class='navItem'>Contact</a></li>

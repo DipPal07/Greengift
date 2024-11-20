@@ -1,3 +1,10 @@
+<%-- 
+    Document   : approach
+    Created on : 18 Nov, 2024, 1:47:23 AM
+    Author     : dipku
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -150,6 +157,7 @@
 
     <body>
         <header>
+              <jsp:include page="./navBar.jsp" />
         </header>
         <section class="approach-section">
             <div class="intro">
@@ -201,14 +209,14 @@
             <p>Our vision is to foster a new generation that respects nature, values conservation, and understands the role each individual plays in protecting our planet.</p>
         </section>
         <footer>
-            
+              <jsp:include page="./footer.jsp" />
         </footer>
 
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-    <script src="./index.js" type="module"></script>
+
     <script src="./navBar.js"></script>
 
 </html>

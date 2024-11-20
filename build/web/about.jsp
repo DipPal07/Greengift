@@ -1,3 +1,10 @@
+<%-- 
+    Document   : about
+    Created on : 18 Nov, 2024, 1:46:50 AM
+    Author     : dipku
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +25,7 @@
 
     <body>
         <header>
+                <jsp:include page="./navBar.jsp" />
         </header>
         <div>
             <div class="container">
@@ -174,6 +182,7 @@
 
 
         <footer>
+              <jsp:include page="./footer.jsp" />
 
         </footer>
 

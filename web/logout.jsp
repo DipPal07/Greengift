@@ -18,7 +18,7 @@
 <%
             session = request.getSession();
             session.invalidate();
-            response.sendRedirect("index.html");
+            response.sendRedirect("success.html");
 
 
 %>
