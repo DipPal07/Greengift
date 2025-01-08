@@ -32,7 +32,7 @@ public class Registration extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        response.setContentType("text/html;charset=UTF-8");
+        
         String name = request.getParameter("name");
         String mobileNo = request.getParameter("mobileNo");
         String email = request.getParameter("email");
